@@ -66,3 +66,16 @@ body {
 }
 .todoData {
 }
+.addItems div {
+  background-color: rgb(39, 37, 37);
+  border-radius: 10px;
+  border: 2px, solid, none;
+  width: 200px;
+  height: 40px;
+  color: white;
+}
+.addItems {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

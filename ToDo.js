@@ -32,27 +32,31 @@ const containerItems = [
     count: 5,
     color: "white",
     id: "todo",
+    paragraph: "[loan-management]-Add card componet",
   },
   {
     title: "In progress",
     count: 5,
     color: "yellow",
     id: "in-progress",
+    paragraph: "[loan-management]-Add card componet",
   },
   {
     title: "Done",
     count: 5,
     color: "green",
     id: "done",
+    paragraph: "[loan-management]-Add card componet",
   },
   {
     title: "Blocked",
     count: 5,
     color: "red",
     id: "blocked",
+    paragraph: "[loan-management]-Add card componet",
   },
 ];
-const todoData = [
+const todoDatas = [
   {
     title: "Geree tseverleh",
     date: "2024-12-09",
@@ -66,7 +70,7 @@ const todoData = [
   {
     title: "Huvtssaa beldeh",
     date: "2024-12-09",
-    state: "todo",
+    state: "in-progress",
   },
 ];
 function addTaskList(title, color, count, id) {
@@ -93,15 +97,35 @@ function addTaskList(title, color, count, id) {
   const para = document.createElement("p");
   para.setAttribute("class", "count");
   para.innerText = count;
-  const todoData = document.createElement("div");
-  todoData.setAttribute("class", "title");
-  todoData.innerText = todoData;
+
   titleDiv.appendChild(cirlce);
   titleDiv.appendChild(h2);
   titleDiv.appendChild(para);
-  titleDiv.appendChild(todoData);
   taskContainer2.appendChild(todoList);
+  // <div class="addItems">
+  //     <div>
+  //       <p>[loan-managament]- Add card component</p>
+  //     </div>
+
+  //     <img src="./trash.svg" alt="" />
+  //   </div>
+  const addItems = document.createElement("div");
+  addItems.setAttribute("class", "addItems");
+  const addItemsInner = document.createElement("div");
+  const pTag = document.createElement("p");
+  pTag.innerText = "[loan-managament]- Add card component";
+  const image = document.createElement("img");
+  image.setAttribute = ("src", "./trash.svg");
+  taskContainer2.appendChild(addItemsInner);
+  addItems.appendChild(addItemsInner);
 }
 containerItems.map((item) => {
-  addTaskList(item.title, item.color, item.count, item.id);
+  addTaskList(item.title, item.color, item.count, item.id, item.paragraph);
 });
+const rendertodoDatas = (title, state) => {
+  const todoDatasDiv = document.querySelector("#todoData");
+};
+// function dataList(title, date, state) {
+//   //  const taskContainer2 = document.querySelector("#taskContainer");
+//   const dataList = document.greateElement("div");
+// }
